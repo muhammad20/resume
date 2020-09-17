@@ -4,9 +4,31 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{geometry}
 \usepackage{xcolor}
+\usepackage{kpfonts}
+\usepackage{array}
+\usepackage[explicit]{titlesec}
+
+\pagestyle{empty}
 \definecolor{themecolor}{HTML}{882222}
-\geometry{left=10mm, top=10mm, right=10mm, bottom=10mm}
+\geometry{left=10mm, top=20mm, right=10mm, bottom=10mm}
+
+\newenvironment{verbose}[3]
+{
+  \noindent {\bf#1} \hfill {\em #2}
+  \\ \textcolor{darkgray}{\fontsize{10pt}{10pt}\textit{#3}}
+
+}{}
 
 \begin{document}
-\include{info}
+\input{info}
+\vspace{2mm}
+\input{summary}
+\vspace{5mm}
+\input{education}
+\vspace{5mm}
+\input{experience}
+\vspace{5mm}
+\input{projects}
+\vspace{5mm}
+\input{skills}
 \end{document}
